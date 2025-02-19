@@ -132,6 +132,21 @@ td:hover {
     background-color: transparent;
 }
 
+/* Style for holiday links */
+td a {
+    color: #ff69b4; /* Pink text for holidays */
+    font-weight: bold;
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease, background-color 0.3s ease; /* Smooth transition */
+}
+
+td a:hover {
+    color: white; /* Change text to white on hover */
+    background-color: #ff69b4; /* Pink background on hover */
+    padding: 5px;
+    border-radius: 5px;
+}
+
 /* Responsive Design */
 @media (max-width: 1024px) {
     .calendar-container {
@@ -144,3 +159,5 @@ td:hover {
         grid-template-columns: 1fr;
     }
 }
+
+
