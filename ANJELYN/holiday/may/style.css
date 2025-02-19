@@ -1,0 +1,103 @@
+             /* General Styles */
+             body {
+            font-family: 'Arial', sans-serif;
+            background-color: #ffe6f0;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        /* Container for Content */
+        .content-container {
+            background-color: #ffffff;
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 900px;
+        }
+
+        /* Heading */
+        h1 {
+            font-size: 3em;
+            color: #d81b60;
+            margin-bottom: 20px;
+        }
+
+        /* Paragraphs */
+        p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin: 20px 0;
+            color: #555;
+        }
+
+        /* Definition Section */
+        .definition {
+            background-color: #ffe0f0;
+            padding: 25px;
+            margin-top: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .definition h2 {
+            color: #d81b60;
+            font-size: 2.2em;
+        }
+
+        /* Image Styling */
+        img {
+            width: 100%;
+            max-width: 700px;
+            margin: 30px 0;
+            border-radius: 10px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Back Button Styling */
+        .back-button {
+            background-color: #d81b60;
+            color: white;
+            font-size: 1.2em;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 30px;
+        }
+
+        .back-button:hover {
+            background-color: #c2185b;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5em;
+            }
+
+            .content-container {
+                width: 90%;
+                padding: 20px;
+            }
+
+            img {
+                width: 100%;
+            }
+
+            p {
+                font-size: 1.1em;
+            }
+        }

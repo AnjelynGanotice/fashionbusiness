@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday!</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #ffd1dc, #fce4ec);
+            color: #ff63a5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .content-container {
+            background-color: #ffffff;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15);
+            transition: transform 0.5s ease;
+            max-width: 700px;
+            position: relative;
+        }
+
+        .content-container:hover {
+            transform: scale(1.02);
+        }
+
+        h1 {
+            font-size: 3.5em;
+            color: #ff4081;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        p {
+            font-size: 1.4em;
+            line-height: 1.8;
+            color: #f06292;
+        }
+
+        .birthday-image img {
+            width: 100%;
+            max-width: 600px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .birthday-image img:hover {
+            transform: scale(1.05);
+        }
+
+        .back-button {
+            background-color: #f48fb1;
+            color: white;
+            font-size: 1.2em;
+            padding: 18px 36px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            margin-top: 30px;
+            font-weight: bold;
+        }
+
+        .back-button:hover {
+            background-color: #ec407a;
+            transform: translateY(-5px);
+        }
+
+        /* Confetti Animation */
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: #ff4081;
+            opacity: 0.7;
+            border-radius: 50%;
+            animation: fall linear infinite;
+        }
+
+        @keyframes fall {
+            from { transform: translateY(-100vh); }
+            to { transform: translateY(100vh); }
+        }
+    </style>
+</head>
+<body>
+    <audio autoplay loop>
+        <source src="birthday-music.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="content-container">
+        <h1>Happy Birthday!</h1>
+        <p>I am Anjelyn G. Ganotice, 20 years old from Purok 5, Brgy. Rang-ayan, Science City of Muñoz.</p>
+
+        <div class="birthday-image">
+            <img src="birthday.jpg" alt="Happy Birthday Celebration">
+        </div>
+        
+        <p>2nd year College at Core Gateway College, Inc.</p>
+        <button class="back-button" onclick="window.history.back()">Back to Previous Page</button>
+    </div>
+
+
+</body>
+</html>

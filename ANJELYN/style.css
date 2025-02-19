@@ -1,0 +1,146 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #ffe6f0;
+    color: rgb(0, 0, 0);
+}
+
+.calendar-header {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 60px; /* Font size */
+    font-weight: bold;
+    text-align: center;
+    background-color: transparent; /* Make the background transparent */
+    color: #f06c6c; /* Set the text color */
+    padding: 20px; /* Adjust padding as needed */
+    border-radius: 30px; /* Rounded corners, adjust value to your preference */
+}
+
+.year-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0;
+}
+
+.year {
+    font-size: 40px; /* Make the year title bigger */
+    font-weight: bold;
+    color: white;
+    background-color: #ee9dbb;
+    padding: 15px 30px; /* Larger padding to make it more prominent */
+    border-radius: 20px; /* More rounded year box */
+    margin-right: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    border: 3px solid #d81b60; /* Add border around the year title */
+    text-transform: uppercase; /* Make it more striking */
+}
+
+.yearly-calendar {
+    font-size: 40px; /* Make the "2025 Calendar" title bigger */
+    font-weight: bold;
+    color: black;
+    background-color: white;
+    padding: 15px 30px; /* Larger padding for more space around the text */
+    border: 3px solid #d81b60; /* Add border around the title */
+    border-radius: 20px; /* Rounded corners for the border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-transform: uppercase; /* Make it more prominent */
+}
+
+/* Calendar Grid */
+.calendar-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    padding: 30px;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+/* Month Container */
+.month-container {
+    background: linear-gradient(145deg, #f0f4f8, #e0e7ff); /* Gradient background for a soft touch */
+    border-radius: 20px;
+    border: 2px solid #d81b60;
+    padding: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Larger shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+.month-container:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* Enhanced shadow effect on hover */
+}
+
+/* Month Title */
+.month-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    background-color: #ff5f9a;
+    padding: 10px;
+    border-radius: 10px;
+    text-transform: uppercase; /* Make titles more striking */
+}
+
+.month-title:hover {
+    background-color: #ee9dbb; /* Slightly darker shade of blue for hover */
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: transparent; /* Remove solid background to let the container show */
+}
+
+th {
+    background-color: #d43670;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    font-size: 16px;
+    letter-spacing: 1px; /* Spacing out letters for a refined look */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+th:hover {
+    background-color: #ee9dbb; /* Hover effect on the day labels */
+    cursor: pointer; /* Change cursor to indicate interactivity */
+}
+
+td {
+    padding: 15px;
+    font-size: 18px;
+    color: black;
+    text-align: center;
+    border-radius: 8px;
+    transition: background-color 0.3s ease; /* Smooth hover effect for dates */
+    border: 1PX solid gray;
+}
+
+td:hover {
+    background-color: #ee9dbb; /* Subtle hover effect for date cells */
+    cursor: pointer; /* Change cursor to indicate interactivity */
+}
+
+/* Empty Cells */
+.empty {
+    background-color: transparent;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .calendar-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .calendar-container {
+        grid-template-columns: 1fr;
+    }
+}
