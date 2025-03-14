@@ -1,0 +1,235 @@
+/* GENERAL STYLES */
+body {
+    font-family: 'Playfair Display', serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background: linear-gradient(to bottom, #f9f5ed, #e5d9c8);
+}
+
+/* HEADER */
+header {
+    color: #3a3a3a;
+    padding: 20px 50px;
+    text-align: center;
+    font-size: 34px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-family: 'Didot', serif;
+    text-transform: uppercase;
+    border-bottom: 3px solid #c9a227;
+}
+
+/* HERO SECTION */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    font-size: 48px;
+    font-weight: bold;
+    font-family: 'Dancing Script', cursive;
+    text-shadow: 4px 4px 14px rgba(0, 0, 0, 0.75);
+    padding: 20px;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('fashion-bg.jpg') no-repeat center center/cover;
+    filter: brightness(45%);
+    z-index: -1;
+}
+
+/* NAVIGATION */
+nav {
+    position: absolute;
+    top: 20px;
+    right: 50px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+.nav-button {
+    background: transparent;
+    border: 2px solid #c9a227;
+    color: black;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-button:hover {
+    background: #f1dc94;
+    color: black;
+    transform: scale(1.05);
+    box-shadow: 0px 6px 12px rgba(201, 162, 39, 0.6);
+}
+
+/* MAIN CONTAINER */
+.container {
+    width: 85%;
+    margin: auto;
+    padding: 50px 20px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 30px;
+    font-family: 'Bodoni Moda', serif;
+    color: #c9a227;
+    border-bottom: 2px solid #c9a227;
+    padding-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+/* PRODUCT GRID */
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 50px;
+    justify-content: center;
+    align-items: stretch;
+}
+
+/* PRODUCT CARD */
+.product {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: auto;
+    min-height: 500px;
+}
+
+.product:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* PRODUCT IMAGE */
+.product img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease-in-out;
+}
+
+.product:hover img {
+    transform: scale(1.05);
+}
+
+/* PRODUCT TITLE */
+.product h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-family: 'Didot', serif;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    font-weight: bold;
+}
+
+/* PRODUCT PRICE */
+.product p {
+    font-size: 22px;
+    color: #c9a227;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* BUY NOW BUTTON */
+.buy-button {
+    background-color: #d4af37; /* Gold color for luxury feel */
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    padding: 12px 24px;
+    margin-top: auto;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+}
+
+.buy-button:hover {
+    background-color: #b8932f; /* Darker gold for hover effect */
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(201, 162, 39, 0.6);
+}
+
+/* RIBBON LABEL */
+.product::before {
+    content: "New Collection";
+    font-size: 14px;
+    color: white;
+    background: #c9a227;
+    padding: 5px 15px;
+    border-radius: 4px;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    font-family: 'Playfair Display', serif;
+}
+
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    /* NAVIGATION */
+    nav {
+        top: 10px;
+        right: 20px;
+        gap: 10px;
+    }
+
+    .nav-button {
+        padding: 10px 18px;
+        font-size: 14px;
+    }
+
+    /* HERO SECTION */
+    .hero {
+        font-size: 36px;
+        padding: 20px;
+    }
+
+    /* PRODUCT GRID */
+    .products {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .product {
+        min-height: auto;
+    }
+}
+
