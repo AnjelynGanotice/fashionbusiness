@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="icon" href="logo.jpg">
+   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="styles.css">
+   <script src="cart.js" defer></script>
+   <title>NYPN</title>
+   <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #ffffff;
+            color: rgb(0, 0, 0);
+        }
+
+        .warning-bar {
+            background: #4c4c4c;
+            text-align: center;
+            padding: 10px;
+            font-size: 14px;
+            color: #ffffff;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1001;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgb(0, 0, 0);
+            padding: 1px 40px;
+            width: 100%;
+            position: fixed;
+            top: 35px;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            position: relative;
+        }
+
+        .navbar a::after {
+            content: "";
+            display: block;
+            width: 0;
+            height: 2px;
+            background: white;
+            transition: width 0.3s;
+            position: absolute;
+            left: 0;
+            bottom: -3px;
+        }
+
+        .navbar a:hover::after {
+            width: 100%;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+        }
+
+       
+        footer {
+            text-align: center;
+            padding: 20px;
+
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .footer-links a {
+            display: inline-block;
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="warning-bar">
+    WARNING: This product contains nicotine. Nicotine is an addictive chemical. Strictly for 18+.
+</div>
+
+<nav class="navbar">
+    <div class="logo">
+        <a href="index.html" style="display: flex; flex-direction: column; align-items: center; text-decoration: none;">
+            <img src="logo.jpg" alt="NYPN Logo" style="height: 75px;">
+        </a>
+    </div>
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="pod_kits.html">Pod Kits</a>
+        <a href="e-juice.html">E-Juice</a>
+        <a href="dispo.html">Disposable Vape</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="promo.html">Promo</a>
+    </div>
+    <div>
+        <div>
+            <a href="loginregister.html">
+                <img src="profilelogo.jpg" alt="Logo" class="logo">
+            </a> <!-- Closed the first <a> tag properly -->
+            <a href="cart.html" class="cart">
+                🛒 Cart <span class="cart-count">0</span>
+            </a> <!-- Closed the second <a> tag properly -->
+        </div>
+        
+    </div>
+</nav>
+<div class="chat-button">
+    <a href="contact.html">
+        <img src="chat.jpg" alt="Facebook Logo" class="fb-logo">
+    </a>
+    
+    
+</div> 
+
+<div class="cart-wrapper">
+    <h2>Your Shopping Cart</h2>
+    <div id="cart-container">
+        <div id="cart-items"></div>
+        <div id="cart-summary">
+            <h3>Total: <span id="cart-total">₱0.00</span></h3>
+            <h3>Fill in your details before checkout:</h3>
+            <div class="checkout-form-container">
+                <form id="checkout-form">
+                    <div class="form-group">
+                        <label for="name">Full Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number:</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="address">Shipping Address:</label>
+                        <textarea id="address" name="address" required></textarea>
+                    </div>
+
+                    <button type="button" id="checkout">Proceed to Checkout</button>
+                </form>
+
+                <button type="button" id="clear-cart">Clear Cart</button>
+            </div>
+        </div>
+    </div>
+</div>
+<hr>
+<footer class="container">
+
+    <div class="wrapper">
+ 
+        <div class="col" data-aos="zoom-in">
+            <h4>Contact Us</h4>
+            <p>#79 Raymundo Eugenio Street, San Jose, Philippines, 3121</p>
+            <p>0976 103 8059</p>
+            <p>Always Open</p>
+        </div>
+      
+    </div>
+    <br>
+    <div class="footer-links">
+        <a href="https://www.facebook.com/nyoponi" target="_blank" class="fb-link">
+            <img src="fb.jpg" alt="Facebook Logo" class="fb-logo">
+        </a>
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=nypnvapeshop@gmail.com" target="_blank" class="email-link">
+            <img src="email.jpg" alt="Email Logo" class="email-logo">
+        </a>
+    </div>
+    
+ <br>
+ <h4>&copy; 2025 NYPN Vape Shop. All rights reserved.</h4>  
+ </footer>
+
+<script src="main.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const cartCountEl = document.querySelector(".cart-count");
+        const cartItemsEl = document.getElementById("cart-items");
+        const cartTotalEl = document.getElementById("cart-total");
+        const checkoutButton = document.getElementById("checkout");
+        const clearCartButton = document.getElementById("clear-cart");
+
+        function updateCartDisplay() {
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+            let totalQuantity = cart.reduce((sum, item) => sum + item.quantity, 0);
+            let totalPrice = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+
+            if (cartCountEl) cartCountEl.textContent = totalQuantity;
+            if (cartItemsEl) {
+                cartItemsEl.innerHTML = cart.length 
+                    ? cart.map(item => `<p>${item.quantity}x ${item.name} - ₱${(item.price * item.quantity).toFixed(2)}</p>`).join("")
+                    : "<p>Your cart is empty.</p>";
+            }
+            if (cartTotalEl) cartTotalEl.textContent = `₱${totalPrice.toFixed(2)}`;
+        }
+
+        document.querySelectorAll(".add-to-cart-btn").forEach(button => {
+            button.addEventListener("click", function () {
+                let name = this.dataset.name;
+                let price = parseFloat(this.dataset.price);
+                let img = this.dataset.img || "";
+
+                let cart = JSON.parse(localStorage.getItem("cart")) || [];
+                let existingItem = cart.find(item => item.name === name);
+
+                if (existingItem) {
+                    existingItem.quantity += 1;
+                } else {
+                    cart.push({ name, price, quantity: 1, img });
+                }
+
+                localStorage.setItem("cart", JSON.stringify(cart));
+                updateCartDisplay();
+                alert(`${name} has been added to your cart!`);
+            });
+        });
+
+        if (checkoutButton) {
+            checkoutButton.addEventListener("click", function () {
+                let name = document.getElementById("name").value.trim();
+                let email = document.getElementById("email").value.trim();
+                let phone = document.getElementById("phone").value.trim();
+                let address = document.getElementById("address").value.trim();
+                let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+                if (cart.length === 0) {
+                    alert("🛒 Your cart is empty! Add items before proceeding.");
+                    return;
+                }
+
+                if (!name || !email || !phone || !address) {
+                    alert("⚠️ Please fill in all your details before proceeding to checkout.");
+                    return;
+                }
+
+                let total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+                alert(`🎉 Thank you, ${name}!\nYour total is: ₱${total.toFixed(2)}\nWe will contact you via ${email} or ${phone} regarding your delivery.`);
+
+                localStorage.removeItem("cart");
+                updateCartDisplay();
+                document.getElementById("checkout-form").reset();
+            });
+        }
+
+        if (clearCartButton) {
+            clearCartButton.addEventListener("click", function () {
+                localStorage.removeItem("cart");
+                updateCartDisplay();
+                alert("🗑️ Your cart has been cleared!");
+            });
+        }
+
+        updateCartDisplay();
+    });
+</script>
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="icon" href="logo.jpg">
+   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="styles.css">
+   <script src="cart.js" defer></script>
+   <title>NYPN</title>
+</head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #ffffff;
+            color: rgb(0, 0, 0);
+        }
+
+        .warning-bar {
+    background: #4c4c4c;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+    color: #ffffff;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1001;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgb(0, 0, 0);
+    padding: 1px 40px;
+    width: 100%;
+    position: fixed;
+    top: 35px; /* Push navbar below warning bar */
+    left: 0;
+    z-index: 1000;
+}
+
+        .navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    position: relative;
+}
+
+.navbar a::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: width 0.3s;
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+}
+
+.navbar a:hover::after {
+    width: 100%;
+}
+
+
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+        }
+
+        .hero {
+            background: url('bg.jpg') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero-content {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    padding: 20px 40px;
+    border-radius: 50px; /* To create an oblong shape */
+    background: linear-gradient(to right, #888888, #000000); /* Gradient from gray to black */
+    color: white; /* Text color */
+    transition: background 0.3s ease; /* Smooth transition for the background */
+}
+
+.hero-content:hover {
+    background: linear-gradient(to right, #333333, #444444); /* Change to a darker gradient on hover */
+}
+
+.hero-content h1 {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+
+.chat-button {
+    position: fixed;
+    bottom: 40px; /* Adjusted to move it slightly further up */
+    right: 30px; /* Adjusted to move it slightly further in */
+    color: white;
+    padding: 30px 50px; /* Increased padding for a bigger button */
+    font-size: 40px; /* Increased font size for better visibility */
+    border-radius: 10px; /* Slightly rounded corners */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition for hover */
+}
+
+.chat-button:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+    
+}
+
+.chat-button img {
+    width: 70px; /* Adjust width to make it bigger */
+    height: auto; /* Maintain aspect ratio */
+    transition: width 0.3s ease; /* Smooth transition for resizing */
+}
+
+    </style>
+</head>
+<body>
+
+    <div class="warning-bar">
+        WARNING: This product contains nicotine. Nicotine is an addictive chemical. Strictly for 18+.
+    </div>
+
+    <nav class="navbar">
+        <div class="logo"> <a href="index.html" class="logo" style="display: flex; flex-direction: column; align-items: center; text-decoration: none;">
+            <img src="logo.jpg" alt="NYPN Logo" style="height: 75px;">
+   
+   </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="pod_kits.html">Pod Kits</a>
+            <a href="e-juice.html">E-Juice</a></li>
+            <a href="dispo.html">Disposable Vape</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="promo.html">Promo</a>
+            </a></li>
+
+        </div>
+        <div>
+            <a href="loginregister.html">
+                <img src="profilelogo.jpg" alt="Logo" class="logo">
+            </a>
+            <a href="cart.html" class="cart">
+                🛒 Cart <span class="cart-count">0</span>
+        </div>
+    </nav>
+
+    <div class="hero">
+       
+    </div>
+
+    <div class="chat-button">
+        <a href="contact.html">
+            <img src="chat.jpg" alt="Facebook Logo" class="fb-logo">
+        </a>
+        
+        
+    </div> 
+            <br>
+           
+         </div>
+      </div>
+   </main>
+   <hr>
+   <section class="collection container" id="promo">
+      <!-- Section Header -->
+      <div class="section-heading">
+         <div class="heading">
+
+            <h2 class="heading-two"> PROMO</h2>
+            <hr>
+         </div>
+         <hr>
+         <div class="btn-section">
+          <button class="btn" onclick="window.location.href='promo.html';">View all</button>
+          <hr>
+  
+         </div>
+    </div>
+        <!-- section wrapper and col -->
+        <div class="grid-wrapper">
+           <div class="col collection-item" data-item="PROMO" data-aos="zoom-in-up">
+              <figure>
+                  <img src="img/promo/PROMO1.JPG" alt="SVL POD">
+              </figure>
+              <div class="col-body">
+                 <BR>
+                  <p class="rating-icon">
+                      <i class="fa-solid fa-star"></i> <span class="rating-num"> ★★★★★ (5)</span>
+                   </p>
+                  <BR>
+                  <h3 class="heading-three">SVL POD</h3>
+                  <label for="flavor-select-vagend" class="sub-heading" style="color: black;">PROMO:</label>
+                  <select class="flavor-select" id="flavor-select-vagend">
+                    <option value="BUY 1 GET 1 SVL POD">Buy 1 take 1</option>
+                  </select>
+                  <div class="col-footer">
+                      <p class="show-price">₱300</p>
+                      <button class="add-to-cart-btn" data-name="RYUU BOOST" data-price="700" data-img="img/disposable_vape/RYUU BOOST.JPG">
+                          Add to Cart
+                      </button>
+                  </div>
+              </div>
+          </div>
+          
+          
+    
+          <div class="col collection-item" data-item="POD-KITS" data-aos="zoom-in-up">
+           <figure>
+               <img src="img/promo/PROMO2.JPG" alt="RELX INFINITY 2">
+           </figure>
+           <div class="col-body">
+              <BR>
+               <p class="rating-icon">
+                  <i class="fa-solid fa-star"></i> <span class="rating-num"> ★★★★★ (4.1)</span>
+               </p>
+               <BR>
+               <h3 class="heading-three">RELX INFINITY 2</h3>
+               <label for="flavor-select-vagend" class="sub-heading" style="color: black;">PROMO:</label>
+               <select class="flavor-select" id="flavor-select-vagend">
+                 <option value="FREE SVL POD + VIDA POD">FREE SVL POD</option>
+               </select>
+               <div class="col-footer">
+                   <p class="show-price">₱1,550</p>
+                   <button class="add-to-cart-btn">Add to Cart</button>
+               </div>
+           </div>
+       </div>
+       
+    
+       <div class="col collection-item" data-item="POD-KITS" data-aos="zoom-in-up">
+        <figure>
+            <img src="img/promo/PROMO3.JPG" alt="RELX ARTISAN">
+        </figure>
+        <div class="col-body">
+           <BR>
+            <p class="rating-icon">
+                <i class="fa-solid fa-star"></i> <span class="rating-num"> ★★★ (3)</span>
+            </p>
+            <br>
+            <h3 class="heading-three">RELX ARTISAN</h3>
+            <label for="flavor-select-vagend" class="sub-heading" style="color: black;">PROMO:</label>
+                  <select class="flavor-select" id="flavor-select-vagend">
+                    <option value="FREE SVL POD + VIDA POD">FREE SVL POD</option>
+                  </select>
+            <div class="col-footer">
+                <p class="show-price">₱2,150</p>
+                <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+    
+  
+      </div>
+   </section>
+   <br>
+   <br>
+      <!-- About-->
+      <hr>
+      <section class="about container" id="about">
+          <div class="overlay-bg"></div> <!-- Background overlay for a premium effect -->
+          <div class="wrapper">
+              
+              <!-- Left Column - Image & Discount Offer -->
+              <div class="col-img col">
+                  <div class="get-off" data-aos="zoom-in">
+                      <h4>Get Up to <span>50% OFF</span> </h4>
+                      <p class="off-text">Limited-time discounts on premium vapes. Grab yours today!</p>
+                  </div>
+                  <figure data-aos="fade-left">
+                      <img src="logo.jpg" alt="Premium Vape Collection">
+                  </figure>
+              </div>
+      
+              <!-- Right Column - About Text & CTA -->
+              <div class="col-text col" data-aos="fade-right" style="background-color: rgb(255, 255, 255);">
+                  <p class="sub-heading">Why Choose Nyoponi Vape Shop?</p>
+                  <br>
+                  <h5 class="heading-one">NYOPONI <br> Quality <span>Vapes</span></h5>
+     <hr>
+                  <ul class="features">
+                      <li>✔️ 100% Authentic & Trusted Brands</li>
+                      <li>✔️ A Wide Selection of Premium Flavors</li>
+                      <li>✔️ Sleek & Customizable Vape Kits</li>
+                      <li>✔️ Affordable Prices & Exclusive Deals</li>
+                      <li>✔️ Fast & Secure Delivery</li>
+                  </ul>
+                  <div class="btn-container">
+                      <button class="btn shop-btn">🛒 Shop Now</button>
+                  </div>
+              </div>
+              
+          </div>
+      </section>
+      
+   <hr>
+   <!-- New Arrival Section -->
+  <section class="collection container" id="new_arrivals">
+      <!-- Section Header -->
+      <div class="section-heading">
+         <div class="heading">
+            <h2 class="heading-two">NEW ARRIVALS</h2>
+            <hr>
+         </div>
+         </div>
+      </div>
+      <!-- section wrapper and col -->
+      <div class="grid-wrapper">
+        <div class="col collection-item" data-item="POD-KITS" data-aos="zoom-in-up">
+            <figure>
+                <img src="img/pod_kits/Picsart_25-03-30_13-54-51-678.jpg" alt="NEXLIM">
+            </figure>
+            <br>
+            <div class="col-body">
+                <p class="rating-icon">
+                    <i class="fa-solid fa-star"></i> <span class="rating-num">★★★★★ (5)</span>
+                </p>
+                <h3 class="heading-three">NEXLIM</h3>
+        
+              <label for="flavor-select" class="sub-heading" style="color: black;">COLORS:</label>
+                <select class="flavor-select">
+                    <option value="Glory Red">Glory Red</option>
+                    <option value="Power Black">Power Black</option>
+                    <option value="Pine Green">Pine Green</option>
+                    <option value="Dark Grey">Dark Grey</option>
+                    <option value="Dark Brown">Dark Brown</option>
+                    <option value="Dark Blue">Dark Blue</option>
+                    <option value="Coral Orange">Coral Orange</option>
+                    <option value="Pearl Pink">Pearl Pink</option>
+                    <option value="Rose Gold">Rose Gold</option>
+                    <option value="Starry Blue">Starry Blue</option>
+                    <option value="Black Gold">Black Gold</option>
+                    <option value="Black Warrior">Black Warrior</option>
+                </select>
+        
+                <div class="col-footer">
+                    <p class="show-price">₱700.00</p>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col collection-item" data-item="POD-KITS" data-aos="zoom-in-up">
+            <figure>
+                <img src="img/disposable_vape/Picsart_25-03-30_13-49-45-209.jpg" alt="xvapee">
+            </figure>
+            <br>
+            <div class="col-body">
+                <p class="rating-icon">
+                    <i class="fa-solid fa-star"></i> <span class="rating-num">★★★★★ (4.1)</span>
+                </p>
+                <h3 class="heading-three">X-VAPE</h3>
+                <label for="flavor-select-vagend" class="sub-heading" style="color: black;">Flavors:</label>
+                <select class="flavor-select" id="flavor-select-vagend">
+                    <option value="Summer Dew">Watermelon</option>
+                    <option value="Violet Stream">Black Currant</option>
+                    <option value="Morning Garden">Strawberry</option>
+                    <option value="Purple Twilight">Grapes</option>
+                    <option value="Cold Breeze">Mint</option>
+                    <option value="Cloud Spring">Yakult</option>
+                    <option value="Wild Fragrance">Mixed Berries</option>
+                    <option value="Bubble Dream">Bubble Gum</option>
+              </select>
+              
+         
+                <div class="col-footer">
+                    <p class="show-price">₱400.00</p>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+         </div>
+         
+
+         <div class="col collection-item" data-item="POD-KITS" data-aos="zoom-in-up">
+            <figure>
+                <img src="img/e-juice/Picsart_25-03-30_13-27-26-349.jpg" alt="tp">
+            </figure>
+            <div class="col-body">
+              <br>
+                <p class="rating-icon">
+                    <i class="fa-solid fa-star"></i> <span class="rating-num">★★★★ (4.5)</span>
+                </p>
+                <h3 class="heading-three">ICE FORMULA</h3>
+                <label for="flavor-select-vagend" class="sub-heading" style="color: black;">Flavors:</label>
+                <select class="flavor-select" id="flavor-select-vagend">
+                  <option value="Bubble Gum">Bubble Gum</option>
+                  <option value="Lychee">Lychee</option>
+                  <option value="Fresh Mint">Fresh Mint</option>
+                  <option value="Strawberry">Strawberry</option>
+                  <option value="Watermelon">Watermelon</option>
+                  <option value="Yakult">Yakult</option>
+                  <option value="Mixed Berries">Mixed Berries</option>
+                  <option value="Grapes">Grapes</option>
+              </select>
+        
+                <div class="col-footer">
+                    <p class="show-price">₱350.00</p>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+      
+
+ <div class="col collection-item" data-item="POD-KITS" data-aos="zoom-in-up">
+<figure>
+  <img src="img/disposable_vape/Picsart_25-03-30_13-54-18-659.jpg" alt="ROYAL ELITE">
+</figure>
+<br>
+<div class="col-body">
+  <p class="rating-icon">
+      <i class="fa-solid fa-star"></i> <span class="rating-num">★★★★★ (5)</span>
+  </p>
+  <h3 class="heading-three">CHILLAX NEO</h3>
+  <label for="flavor-select" class="sub-heading" style="color: black;">Flavors:</label>
+<select class="flavor-select" id="flavor-select">
+<option value="Strawberry">Strawberry</option>
+<option value="Vanilla Ice Cream">Vanilla Ice Cream</option>
+<option value="Grapes">Grapes</option>
+<option value="Watermelon">Watermelon</option>
+<option value="Mix Berries">Mix Berries</option>
+<option value="Lychee">Lychee</option>
+<option value="Mint">Mint</option>
+<option value="Blueberry">Blueberry</option>
+<option value="Blackcurrant">Blackcurrant</option>
+<option value="Bubblegum">Bubblegum</option>
+<option value="Yakult">Yakult</option>
+<option value="Apple">Apple</option>
+<option value="Mango Ice">Mango Ice</option>
+<option value="Cola">Cola</option>
+</select>
+
+  <div class="col-footer">
+      <p class="show-price">₱400.00</p>
+      <button class="add-to-cart-btn">Add to Cart</button>
+  </div>
+</div>
+</div>
+
+<br>
+<br>
+      </div>
+   </section>
+   <hr>
+   <section class="collection container" id="pod_kits">
+      <!-- Section Header -->
+      <div class="section-heading">
+         <div class="heading">
+
+            <h2 class="heading-two">POD KITS</h2>
+            <hr>
+         </div>
+         <div class="butn-section">
+
+         <button class="btn" onclick="window.location.href='pod_kits.html';">View all</button>
+         <hr>
+            
+
+
+
+         </div>
+      </div>
+      <!-- section wrapper and col -->
+      <div class="grid-wrapper">
+         <div class="col collection-item" data-item="POD-KITS" data-aos="zoom-in-up">
+            <figure>
+                <img src="img/pod_kits/Picsart_25-03-30_13-25-01-259.jpg" alt="RYUU BOOST">
+            </figure>
+            <div class="col-body">
+                <p class="rating-icon">
+                    <i class="fa-solid fa-star"></i> <span class="rating-num">★★★ (3)</span>
+                </p>
+                <h3 class="heading-three">X6-SERIES DEVICE</h3>
+                <label for="flavor-select" class="sub-heading" style="color: black;">COLORS:</label>
+                <select class="flavor-select">
+                    <option value="Black">Black</option>
+                    <option value="Silver">Silver</option>
+                    <option value="Red">Red</option>
+                    <option value="Blue">Blue</option>
+                    <option value="Purple">Purple</option>
+                    <option value="Gold">Gold</option>
+                    <option value="Rainbow">Rainbow (Iridescent)</option>
+                    
+                </select>
+                
+                <div class="col-footer">
+                    <p class="show-price">₱550.00</p>
+                    <button class="add-to-cart-btn" data-name="RYUU BOOST" data-price="700" data-img="img/disposable_vape/RYUU BOOST.JPG">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        
+
+        <div class="col collection-item" data-item="POD-KITS" data-aos="zoom-in-up">
+         <figure>
+             <img src="img/pod_kits/Picsart_25-03-30_13-28-46-110.jpg" alt="VAGEND">
+         </figure>
+         <div class="col-body">
+             <p class="rating-icon">
+                 <i class="fa-solid fa-star"></i> <span class="rating-num">★★★★★ (5)</span>
+             </p>
+             <h3 class="heading-three">DROP V1.5 RDA</h3>
+               <label for="flavor-select" class="sub-heading" style="color: black;">COLORS:</label>
+                <select class="flavor-select">
+                 <option value="MATT BLACK">MATT BLACK</option>
+                 <option value="GOLD">GOLD</option>
+                 <option value="PURPLE">PURPLE</option>
+                 <option value="SILVER">SILVER</option>
+                 <option value="GREEN">GREEN</option>
+             </select>
+     
+             <div class="col-footer">
+                 <p class="show-price">₱500.00</p>
+                 <button class="add-to-cart-btn">Add to Cart</button>
+             </div>
+         </div>
+     </div>
+     
+
+     <div class="col collection-item" data-item="POD-KITS" data-aos="zoom-in-up">
+      <figure>
+          <img src="img/pod_kits/Picsart_25-03-30_13-29-19-489.jpg" alt="tp">
+      </figure>
+      <div class="col-body">
+          <p class="rating-icon">
+              <i class="fa-solid fa-star"></i> <span class="rating-num">★★★★★ (4.1)</span>
+          </p>
+          <h3 class="heading-three">NOOK</h3>
+          <label for="flavor-select-vagend" class="sub-heading" style="color: black;">ITEM:</label>
+          <select class="flavor-select" id="flavor-select-vagend">
+            <option value="Battery">Battery</option>
+          </select>
+          <div class="col-footer">
+              <p class="show-price">₱300.00</p>
+              <button class="add-to-cart-btn">Add to Cart</button>
+          </div>
+      </div>
+  </div>
+
+  <div class="col collection-item" data-item="POD-KITS" data-aos="zoom-in-up">
+   <figure>
+       <img src="img/pod_kits/Picsart_25-03-30_13-54-51-678.jpg" alt="xvapee">
+   </figure>
+   <div class="col-body">
+       <p class="rating-icon">
+           <i class="fa-solid fa-star"></i> <span class="rating-num">★★★★★ (4.3)</span>
+       </p>
+       <h3 class="heading-three">OXVA NEXLIM</h3>
+       <label for="flavor-select" class="sub-heading" style="color: black;">COLORS:</label>
+                <select class="flavor-select">
+        <option value="Glory Red">Glory Red</option>
+<option value="Power Black">Power Black</option>
+<option value="Pine Green">Pine Green</option>
+<option value="Dark Grey">Dark Grey</option>
+<option value="Dark Brown">Dark Brown</option>
+<option value="Dark Blue">Dark Blue</option>
+<option value="Coral Orange">Coral Orange</option>
+<option value="Pearl Pink">Pearl Pink</option>
+<option value="Rose Gold">Rose Gold</option>
+<option value="Starry Blue">Starry Blue</option>
+<option value="Black Gold">Black Gold</option>
+<option value="Black Warrior">Black Warrior</option>
+     </select>
+     
+
+       <div class="col-footer">
+           <p class="show-price">₱300.00</p>
+           <button class="add-to-cart-btn">Add to Cart</button>
+       </div>
+   </div>
+</div>
+<br>
+<br>
+
+      </div>
+   </section>
+
+   <!-- E-juice Header -->
+   <hr>
+   <section class="collection container" id="e-juice">
+      <!-- Section Header -->
+      <div class="section-heading">
+         <div class="heading">
+            <h2 class="heading-two">E-JUICE</h2>
+            <hr>
+         </div>
+         <div class="btn-section">
+
+         <button class="btn" onclick="window.location.href='dispo.html';">View all</button>
+         <hr>
+            
+
+
+
+         </div>
+      </div>
+      <!-- section wrapper and col -->
+      <div class="grid-wrapper">
+         <div class="col collection-item" data-item="POD-KITS" data-aos="zoom-in-up">
+            <figure>
+                <img src="img/e-juice/Picsart_25-03-30_13-26-13-965.jpg" alt="RYUU BOOST">
+            </figure>
+            <div class="col-body">
+             
+                <p class="rating-icon">
+                    <i class="fa-solid fa-star"></i> <span class="rating-num">★★★★★ (5)</span>
+                </p>
+                <h3 class="heading-three">BLACK FORMULA</h3>
+                <label for="flavor-select" class="sub-heading" style="color: black;">Flavors:</label>
+                <select class="flavor-select">
+                  <option value="Very Baguio Strawberry">Very Baguio Strawberry</option>
+                  <option value="Beer Sparkle Rootbeer">Beer Sparkle Rootbeer</option>
+                  <option value="Trouble Purple Grape">Trouble Purple Grape</option>
+                  <option value="Red Pulp Watermelon">Red Pulp Watermelon</option>
+                  <option value="Sparkle Squeeze Lemon Cola">Sparkle Squeeze Lemon Cola</option>
+                  <option value="Blue Freeze Blueberry">Blue Freeze Blueberry</option>
+                  <option value="Bacteria Monster Yakult">Bacteria Monster Yakult</option>
+                  <option value="Mixed Berries">Mixed Berries</option>
+              </select>
+              
+                
+                <div class="col-footer">
+                    <p class="show-price">₱350.00</p>
+                    <button class="add-to-cart-btn" data-name="RYUU BOOST" data-price="700" data-img="img/disposable_vape/RYUU BOOST.JPG">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        
+
+        <div class="col collection-item" data-item="POD-KITS" data-aos="zoom-in-up">
+         <figure>
+             <img src="img/e-juice/Picsart_25-03-30_13-26-50-846.jpg" alt="VAGEND">
+         </figure>
+         <div class="col-body">
+            <br>
+             <p class="rating-icon">
+                 <i class="fa-solid fa-star"></i> <span class="rating-num">★★★ (3)</span>
+             </p>
+             <h3 class="heading-three">KWATRO PELIGROS</h3>
+             <label for="flavor-select-vagend" class="sub-heading" style="color: black;">Flavors:</label>
+             <select class="flavor-select">
+               <option value="Cheesecake">Cheesecake</option>
+               <option value="Strabisco">Strabisco</option>
+               <option value="Ube Leche Flan">Ube Leche Flan</option>
+               <option value="Ry4 Ice Cream">Ry4 Ice Cream</option>
+           </select>
+           
+     
+             <div class="col-footer">
+                 <p class="show-price">₱400.00</p>
+                 <button class="add-to-cart-btn">Add to Cart</button>
+             </div>
+         </div>
+     </div>
+     
+
+     <div class="col collection-item" data-item="POD-KITS" data-aos="zoom-in-up">
+      <figure>
+          <img src="img/e-juice/Picsart_25-03-30_13-27-26-349.jpg" alt="tp">
+      </figure>
+      <div class="col-body">
+        <br>
+          <p class="rating-icon">
+              <i class="fa-solid fa-star"></i> <span class="rating-num">★★★★★ (5)</span>
+          </p>
+          <h3 class="heading-three">ICE FORMULA</h3>
+          <label for="flavor-select-vagend" class="sub-heading" style="color: black;">Flavors:</label>
+          <select class="flavor-select" id="flavor-select-vagend">
+            <option value="Bubble Gum">Bubble Gum</option>
+            <option value="Lychee">Lychee</option>
+            <option value="Fresh Mint">Fresh Mint</option>
+            <option value="Strawberry">Strawberry</option>
+            <option value="Watermelon">Watermelon</option>
+            <option value="Yakult">Yakult</option>
+            <option value="Mixed Berries">Mixed Berries</option>
+            <option value="Grapes">Grapes</option>
+        </select>
+  
+          <div class="col-footer">
+              <p class="show-price">₱350.00</p>
+              <button class="add-to-cart-btn">Add to Cart</button>
+          </div>
+      </div>
+  </div>
+
+  <div class="col collection-item" data-item="POD-KITS" data-aos="zoom-in-up">
+   <figure>
+       <img src="img/e-juice/Picsart_25-03-30_13-28-00-162.jpg" alt="xvapee">
+   </figure>
+   <div class="col-body">
+    <br>
+       <p class="rating-icon">
+           <i class="fa-solid fa-star"></i> <span class="rating-num">★★★★★ (5)</span>
+       </p>
+       <h3 class="heading-three">FLAVA</h3>
+       <label for="flavor-select-vagend" class="sub-heading" style="color: black;">Flavors:</label>
+       <select class="flavor-select" id="flavor-select-vagend">
+         <option value="BLACKCURRANT">BLACKCURRANT</option>
+         <option value="LYCHEE + PEACH">LYCHEE + PEACH</option>
+         <option value="HONEYDEW MINT">HONEYDEW MINT</option>
+         <option value="BERRY VANILLA">BERRY VANILLA</option>
+         <option value="MILK + CEREAL">MILK + CEREAL</option>
+         <option value="PANDAN CAKE">PANDAN CAKE</option>
+     </select>
+     
+
+       <div class="col-footer">
+           <p class="show-price">₱300.00</p>
+           <button class="add-to-cart-btn">Add to Cart</button>
+       </div>
+   </div>
+</div>
+<br>
+   <br>
+
+      </div>
+   </section>
+   <hr>
+   <!-- New Collection -->
+   <section class="collection container" id="dispo">
+      <!-- Section Header -->
+      <div class="section-heading">
+         <div class="heading">
+            <h2 class="heading-two">DISPOSABLE VAPE</h2>
+            <hr>
+         </div>
+         <div class="butn-section">
+
+         <button class="btn" onclick="window.location.href='dispo.html';">View all</button>
+         <hr>
+      
+         </div>
+      </div>
+      <!-- section wrapper and col -->
+      <div class="grid-wrapper">
+         <div class="col collection-item" data-item="POD-KITS" data-aos="zoom-in-up">
+            <figure>
+                <img src="img/disposable_vape/Picsart_25-03-30_13-46-27-183.jpg" alt="RYUU BOOST">
+            </figure>
+            <div class="col-body">
+                <p class="rating-icon">
+                    <i class="fa-solid fa-star"></i> <span class="rating-num">★★★★★ (4.1)</span>
+                </p>
+                <h3 class="heading-three">RYUU BOOST</h3>
+                <label for="flavor-select" class="sub-heading" style="color: black;">Flavors:</label>
+                <select class="flavor-select">
+                    <option value="Very Baguio">Very Baguio</option>
+                    <option value="Very More">Very More</option>
+                    <option value="Bron Piccolo">Bron Piccolo</option>
+                    <option value="Yellow Delight">Yellow Delight</option>
+                    <option value="Red Pulp">Red Pulp</option>
+                    <option value="Green Tokyo">Green Tokyo</option>
+                    <option value="Bubble Blower">Bubble Blower</option> 
+                    <option value="Trouble Purple">Trouble Purple</option>  
+                </select>
+                
+                <div class="col-footer">
+                    <p class="show-price">₱480.00</p>
+                    <button class="add-to-cart-btn" data-name="RYUU BOOST" data-price="700" data-img="img/disposable_vape/RYUU BOOST.JPG">
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        
+
+        <div class="col collection-item" data-item="disposable-vape" data-aos="zoom-in-up">
+         <figure>
+             <img src="img/disposable_vape/Picsart_25-03-30_13-47-12-917.jpg" alt="VAGEND">
+         </figure>
+         <div class="col-body">
+             <p class="rating-icon">
+                 <i class="fa-solid fa-star"></i> <span class="rating-num">★★★★★ (4.1)</span>
+             </p>
+             <h3 class="heading-three">VAGEND SVOPP</h3>
+             <label for="flavor-select-vagend" class="sub-heading" style="color: black;">Flavors:</label>
+             <select class="flavor-select" id="flavor-select-vagend">
+                 <option value="Classic Tobacco">Classic Tobacco</option>
+                 <option value="Mint Chill">Mint Chill</option>
+                 <option value="Mango Burst">Mango Burst</option>
+                 <option value="Blueberry Ice">Blueberry Ice</option>
+                 <option value="Strawberry Wave">Strawberry Wave</option>
+             </select>
+     
+             <div class="col-footer">
+                 <p class="show-price">₱550.00</p>
+                 <button class="add-to-cart-btn">Add to Cart</button>
+             </div>
+         </div>
+     </div>
+     
+
+     <div class="col collection-item" data-item="POD-KITS" data-aos="zoom-in-up">
+      <figure>
+          <img src="img/disposable_vape/Picsart_25-03-30_13-49-08-736.jpg" alt="ROYAL ELITE">
+      </figure>
+      <div class="col-body">
+          <p class="rating-icon">
+              <i class="fa-solid fa-star"></i> <span class="rating-num">★★★★★ (4.1)</span>
+          </p>
+          <h3 class="heading-three">ROYAL ELITE</h3>
+          <label for="flavor-select" class="sub-heading" style="color: black;">Flavors:</label>
+       <select class="flavor-select" id="flavor-select">
+        <option value="Strawberry">Strawberry</option>
+        <option value="Vanilla Ice Cream">Vanilla Ice Cream</option>
+        <option value="Grapes">Grapes</option>
+        <option value="Watermelon">Watermelon</option>
+        <option value="Mix Berries">Mix Berries</option>
+        <option value="Lychee">Lychee</option>
+        <option value="Mint">Mint</option>
+        <option value="Blueberry">Blueberry</option>
+        <option value="Blackcurrant">Blackcurrant</option>
+        <option value="Bubblegum">Bubblegum</option>
+        <option value="Yakult">Yakult</option>
+        <option value="Apple">Apple</option>
+        <option value="Mango Ice">Mango Ice</option>
+        <option value="Cola">Cola</option>
+        </select>
+  
+          <div class="col-footer">
+              <p class="show-price">₱400.00</p>
+              <button class="add-to-cart-btn">Add to Cart</button>
+          </div>
+      </div>
+  </div>
+
+  <div class="col collection-item" data-item="POD-KITS" data-aos="zoom-in-up">
+   <figure>
+       <img src="img/disposable_vape/Picsart_25-03-30_13-49-45-209.jpg" alt="xvapee">
+   </figure>
+   <div class="col-body">
+       <p class="rating-icon">
+           <i class="fa-solid fa-star"></i> <span class="rating-num">★★★★★ (4.1)</span>
+       </p>
+       <h3 class="heading-three">X-VAPE</h3>
+       <label for="flavor-select-vagend" class="sub-heading" style="color: black;">Flavors:</label>
+       <select class="flavor-select" id="flavor-select-vagend">
+        <option value="Summer Dew">Watermelon</option>
+       <option value="Violet Stream">Black Currant</option>
+       <option value="Morning Garden">Strawberry</option>
+       <option value="Purple Twilight">Grapes</option>
+       <option value="Cold Breeze">Mint</option>
+       <option value="Cloud Spring">Yakult</option>
+       <option value="Wild Fragrance">Mixed Berries</option>
+       <option value="Bubble Dream">Bubble Gum</option>
+     </select>
+     
+
+       <div class="col-footer">
+           <p class="show-price">₱400.00</p>
+           <button class="add-to-cart-btn">Add to Cart</button>
+       </div>
+   </div>
+</div>
+
+<br>
+   <br>
+      </div>
+   </section>
+   <!-- Footer Section -->
+   <hr>
+   <footer class="container">
+   
+      <div class="wrapper">
+   
+          <div class="col" data-aos="zoom-in">
+              <h4>Contact Us</h4>
+              <p>#79 Raymundo Eugenio Street, San Jose, Philippines, 3121</p>
+              <p>0976 103 8059</p>
+              <p>Always Open</p>
+          </div>
+        
+      </div>
+      <br>
+      <div class="footer-links">
+          <a href="https://www.facebook.com/nyoponi" target="_blank" class="fb-link">
+              <img src="fb.jpg" alt="Facebook Logo" class="fb-logo">
+          </a>
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=nypnvapeshop@gmail.com" target="_blank" class="email-link">
+              <img src="email.jpg" alt="Email Logo" class="email-logo">
+          </a>
+      </div>
+      
+   <br>
+   <h4>&copy; 2025 NYPN Vape Shop. All rights reserved.</h4>  
+   </footer>
+     </section>
+      <script src="main.js"></script>
+   </body>
+   </html>
+   

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="icon" href="logo.jpg">
+   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="styles.css">
+   <script src="cart.js" defer></script>
+   <title>NYPN</title>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .form-container {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .input-group {
+    margin-bottom: 15px;
+  }
+  
+  .input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .switch-form {
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .switch-form a {
+    color: #007BFF;
+    text-decoration: none;
+  }
+  
+  .switch-form a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Hide the registration box by default */
+  .register-box {
+    display: none;
+  }
+  
+  @media (max-width: 600px) {
+    .form-container {
+      width: 90%;
+    }
+  }
+  .logo{
+
+     width: 40px; /* Adjust the size of the logo */
+    height: auto; /* Maintain the aspect ratio */
+    margin-right: 10px; /* Space between the logo and text */
+    vertical-align: middle; /* Align image with text */
+  }
+</style> 
+
+</head>
+
+
+<body>
+
+<div class="warning-bar">
+    WARNING: This product contains nicotine. Nicotine is an addictive chemical. Strictly for 18+.
+</div>
+
+<nav class="navbar">
+    <div class="logo"> <a href="index.html" class="logo" style="display: flex; flex-direction: column; align-items: center; text-decoration: none;">
+        <img src="logo.jpg" alt="NYPN Logo" style="height: 75px;">
+
+</div>
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="pod_kits.html">Pod Kits</a>
+        <a href="e-juice.html">E-Juice</a></li>
+        <a href="dispo.html">Disposable Vape</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="promo.html">Promo</a>
+        </a></li>
+
+    </div>
+    <div>
+        <div>
+            <a href="loginregister.html">
+                <img src="profilelogo.jpg" alt="Logo" class="logo">
+            </a> <!-- Closed the first <a> tag properly -->
+            <a href="cart.html" class="cart">
+                🛒 Cart <span class="cart-count">0</span>
+            </a> <!-- Closed the second <a> tag properly -->
+        </div>
+        
+    </div>
+</nav> 
+<body>
+
+    <div class="container">
+        <div class="form-container">
+          <!-- Login Form -->
+          <div class="form-box login-box active">
+            <h2>Login</h2>
+            <form action="#" method="post">
+              <div class="input-group">
+                <input type="text" placeholder="Username" name="username" required>
+              </div>
+              <div class="input-group">
+                <input type="password" placeholder="Password" name="password" required>
+              </div>
+              <div class="input-group">
+                <button type="submit" class="btn">Login</button>
+              </div>
+              <div class="switch-form">
+                <p>Don't have an account? <a href="#" onclick="toggleForm()">Register here</a></p>
+              </div>
+            </form>
+          </div>
+    
+          <!-- Register Form -->
+          <div class="form-box register-box">
+            <h2>Register</h2>
+            <form action="#" method="post">
+              <div class="input-group">
+                <input type="text" placeholder="Username" name="username" required>
+              </div>
+              <div class="input-group">
+                <input type="email" placeholder="Email" name="email" required>
+              </div>
+              <div class="input-group">
+                <input type="password" placeholder="Password" name="password" required>
+              </div>
+              <div class="input-group">
+                <button type="submit" class="btn">Register</button>
+              </div>
+              <div class="switch-form">
+                <p>Already have an account? <a href="#" onclick="toggleForm()">Login here</a></p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    
+      <script src="script.js"></script>
+    </body>
+    </html>

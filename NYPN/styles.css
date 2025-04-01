@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+}
+
+.warning-bar {
+background: #4c4c4c;
+text-align: center;
+padding: 10px;
+font-size: 14px;
+color: #ffffff;
+width: 100%;
+position: fixed;
+top: 0;
+left: 0;
+z-index: 1001;
+}
+
+.navbar {
+display: flex;
+justify-content: space-between;
+align-items: center;
+background: rgb(0, 0, 0);
+padding: 1px 40px;
+width: 100%;
+position: fixed;
+top: 35px; /* Push navbar below warning bar */
+left: 0;
+z-index: 1000;
+}
+
+.navbar a {
+color: white;
+text-decoration: none;
+margin: 0 15px;
+position: relative;
+}
+
+.navbar a::after {
+content: "";
+display: block;
+width: 0;
+height: 2px;
+background: white;
+transition: width 0.3s;
+position: absolute;
+left: 0;
+bottom: -3px;
+}
+
+.navbar a:hover::after {
+width: 100%;
+}
+
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.hero {
+    background: url('bg.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+.hero-content {
+position: absolute;
+bottom: 10%;
+left: 50%;
+transform: translateX(-50%);
+text-align: center;
+padding: 20px 40px;
+border-radius: 50px; /* To create an oblong shape */
+background: linear-gradient(to right, #888888, #000000); /* Gradient from gray to black */
+color: white; /* Text color */
+transition: background 0.3s ease; /* Smooth transition for the background */
+}
+
+.hero-content:hover {
+background: linear-gradient(to right, #333333, #444444); /* Change to a darker gradient on hover */
+}
+
+.hero-content h1 {
+font-size: 50px;
+font-weight: bold;
+}
+
+
+.chat-button {
+position: fixed;
+bottom: 40px; /* Adjusted to move it slightly further up */
+right: 30px; /* Adjusted to move it slightly further in */
+color: white;
+padding: 30px 50px; /* Increased padding for a bigger button */
+font-size: 40px; /* Increased font size for better visibility */
+border-radius: 10px; /* Slightly rounded corners */
+cursor: pointer;
+transition: background-color 0.3s, transform 0.3s; /* Smooth transition for hover */
+}
+
+.chat-button:hover {
+transform: scale(1.1); /* Slightly enlarge on hover */
+
+}
+
+.chat-button img {
+width: 70px; /* Adjust width to make it bigger */
+height: auto; /* Maintain aspect ratio */
+transition: width 0.3s ease; /* Smooth transition for resizing */
+}
+.logo{
+
+    width: 40px; /* Adjust the size of the logo */
+    height: auto; /* Maintain the aspect ratio */
+    margin-right: 10px; /* Space between the logo and text */
+    vertical-align: middle; /* Align image with text */
+  }

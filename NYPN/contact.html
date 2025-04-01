@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="icon" href="logo.jpg">
+   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="styles.css">
+   <script src="cart.js" defer></script>
+   <title>NYPN</title>
+</head>
+<style>
+    * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #ffffff;
+            color: rgb(0, 0, 0);
+        }
+
+        .warning-bar {
+    background: #4c4c4c;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+    color: #ffffff;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1001;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgb(0, 0, 0);
+    padding: 1px 40px;
+    width: 100%;
+    position: fixed;
+    top: 35px; /* Push navbar below warning bar */
+    left: 0;
+    z-index: 1000;
+}
+
+        .navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    position: relative;
+}
+
+.navbar a::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: width 0.3s;
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+}
+
+.navbar a:hover::after {
+    width: 100%;
+}
+
+
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+        }
+
+        .hero {
+            background: url('your-image-url.jpg') no-repeat center center/cover;
+            height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero-content {
+            position: absolute;
+            bottom: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+        }
+
+        .hero-content h1 {
+            font-size: 50px;
+            font-weight: bold;
+        }
+
+        .chat-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: green;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+</style>
+</head>
+<body>
+
+<div class="warning-bar">
+    WARNING: This product contains nicotine. Nicotine is an addictive chemical. Strictly for 18+.
+</div>
+
+<nav class="navbar">
+    <div class="logo"> <a href="index.html" class="logo" style="display: flex; flex-direction: column; align-items: center; text-decoration: none;">
+        <img src="logo.jpg" alt="NYPN Logo" style="height: 75px;">
+
+</div>
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="pod_kits.html">Pod Kits</a>
+        <a href="e-juice.html">E-Juice</a></li>
+        <a href="dispo.html">Disposable Vape</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="promo.html">Promo</a>
+        </a></li>
+
+    </div>
+    <div>
+        <div>
+            <a href="loginregister.html">
+                <img src="profilelogo.jpg" alt="Logo" class="logo">
+            </a> <!-- Closed the first <a> tag properly -->
+            <a href="cart.html" class="cart">
+                🛒 Cart <span class="cart-count">0</span>
+            </a> <!-- Closed the second <a> tag properly -->
+        </div>
+        
+    </div>
+</nav>
+   <br>
+   <br>
+   <br>
+   <br>
+    <!-- Contact Page Content -->
+     
+    <main class="contact-page">
+        <section class="contact-intro">
+            <h1>📞 Get in Touch with NYPN Vape Shop</h1>
+            <p>Have questions or need assistance?
+                <br> Our team is here to help! Contact us using the details below or fill out our contact form.</p>
+        </section>
+
+        <!-- Contact Details -->
+        <section class="contact-details">
+            <div class="contact-info">
+                <h2>📍 Visit Our Store</h2>
+                <p>#79 Raymundo Eugenio Street, San Jose, Philippines, 3121</p>
+
+                <h2>📞 Call Us</h2>
+                <p>0976 103 8059</p>
+
+                <h2>📩 Email Us</h2>
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=nypnvapeshop@gmail.com" target="_blank">nypnvapeshop@gmail.com</a>
+
+                <h2>🕒 Store Hours</h2>
+                <p>Open 24/7</p>
+            </div>
+
+            <!-- Google Map Embed -->
+            <div class="map">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=YOUR_VALID_MAP_LINK" 
+                    width="100%" height="300" 
+                    style="border:0;" allowfullscreen loading="lazy">
+                </iframe>
+            </div>
+        </section>
+
+        <!-- Contact Form -->
+        <section class="contact-form">
+            <h2>📧 Send Us a Message</h2>
+            <form action="submit_form.php" method="POST">
+                <div class="input-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="message">Your Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+ <button type="submit" class="btn">Send Message</button> 
+               <br>
+            </form>
+        </section>
+            
+    </main>
+ <!-- Footer Section -->
+ <hr>
+ <footer class="container">
+ 
+    <div class="wrapper">
+ 
+        <div class="col" data-aos="zoom-in">
+            <h4>Contact Us</h4>
+            <p>#79 Raymundo Eugenio Street, San Jose, Philippines, 3121</p>
+            <p>0976 103 8059</p>
+            <p>Always Open</p>
+        </div>
+      
+    </div>
+    <br>
+    <div class="footer-links">
+        <a href="https://www.facebook.com/nyoponi" target="_blank" class="fb-link">
+            <img src="fb.jpg" alt="Facebook Logo" class="fb-logo">
+        </a>
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=nypnvapeshop@gmail.com" target="_blank" class="email-link">
+            <img src="email.jpg" alt="Email Logo" class="email-logo">
+        </a>
+    </div>
+    
+ <br>
+ <h4>&copy; 2025 NYPN Vape Shop. All rights reserved.</h4>  
+ </footer>
+   </section>
+    <script src="main.js"></script>
+ </body>
+ </html>
+ 
